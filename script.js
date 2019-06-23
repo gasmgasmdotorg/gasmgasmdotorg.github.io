@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(247, 202, 201);
+  background(100, 202, 201);
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
   ambientLight(255);
