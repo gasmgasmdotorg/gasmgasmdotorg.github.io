@@ -1,11 +1,22 @@
 var cnv;
 var y = 0;
+let s = 1.0;
 
 function setup() {
   cnv = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.className = "fullscreen";
   album1 = new album(0, 40, 0);
   //img = loadImage('https://f4.bcbits.com/img/a3916325280_10.jpg');
+
+  // set options to prevent default behaviors for swipe, pinch, etc
+  var options = {
+    preventDefault: true
+  };
+
+  // document.body registers gestures anywhere on the page
+  var hammer = new Hammer(document.body, options);
+  hammer.get('pinch').set({ enable: true });
+  hammer.on("pinch", scaleRect);
 }
 
 function draw() {
@@ -18,6 +29,8 @@ function draw() {
 
   album1.spin();
   album1.display();
+
+  camera(0, 0, 20 * s, 0, 0, 0, 0, 1, 0);
 }
 
 class album {
@@ -46,4 +59,9 @@ class album {
 
 function mouseReleased() {
    y = 0;
+}
+
+function scaleRect(event) {
+  console.log(event);
+  s = event.scale;
 }
