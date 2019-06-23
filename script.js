@@ -39,7 +39,7 @@ class album {
     translate(this.x, this.y, this.z);
     strokeWeight(2);
     rotateY(y);
-    ambientMaterial(247, 100, 201);
+    ambientMaterial(100, 100, 201);
     box(height - 350, height - 350, 10);
   }
 }
