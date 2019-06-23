@@ -1,0 +1,14 @@
+canvas.fullscreen {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    margin: 0;
+}
+
+/* #count {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+} */
