@@ -30,7 +30,7 @@ function draw() {
   album1.spin();
   album1.display();
 
-  camera(0, 0, 20 * s, 0, 0, 0, 0, 1, 0);
+  camera(0, 0, 200 * s, 0, 0, 0, 0, 1, 0);
 }
 
 class album {
